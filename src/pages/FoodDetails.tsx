@@ -1,3 +1,4 @@
+
 import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { foodItems } from "@/data/foodItems";
@@ -54,7 +55,7 @@ const FoodDetails = () => {
           variant="ghost"
           size="icon"
           className="mb-4"
-          onClick={() => navigate(-1)}
+          onClick={() => navigate('/')}
         >
           <ArrowLeft className="h-6 w-6" />
         </Button>
