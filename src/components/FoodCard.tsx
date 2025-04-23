@@ -1,6 +1,7 @@
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FoodItem } from "@/types/food";
-import { Pizza } from "lucide-react";
+import { FileText, Egg } from "lucide-react"; // Removed Pizza, added FileText and Egg
 import { useNavigate } from "react-router-dom";
 
 interface FoodCardProps {
@@ -10,6 +11,11 @@ interface FoodCardProps {
 const FoodCard = ({ food }: FoodCardProps) => {
   const navigate = useNavigate();
 
+  const getFoodIcon = () => {
+    if (food.category === "Egg") return <Egg className="h-6 w-6 text-primary" />;
+    return <FileText className="h-6 w-6 text-primary" />;
+  };
+
   return (
     <Card 
       className="hover:shadow-lg transition-shadow cursor-pointer" 
@@ -17,7 +23,7 @@ const FoodCard = ({ food }: FoodCardProps) => {
     >
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="p-2 bg-accent rounded-full">
-          <Pizza className="h-6 w-6 text-primary" />
+          {getFoodIcon()}
         </div>
         <div>
           <CardTitle className="text-lg">{food.name}</CardTitle>

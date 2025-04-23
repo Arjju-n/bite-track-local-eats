@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { FileText, Egg, Rice } from "lucide-react";
+import { FileText, Egg } from "lucide-react";
 
 const DAILY_REQUIREMENTS = {
   calories: 2000,
@@ -34,7 +34,7 @@ const FoodDetails = () => {
 
   const getFoodIcon = () => {
     if (food.category === "Egg") return <Egg className="h-6 w-6" />;
-    if (food.category === "Rice") return <Rice className="h-6 w-6" />;
+    if (food.category === "Rice") return <FileText className="h-6 w-6" />; // Changed from Rice to FileText
     return <FileText className="h-6 w-6" />;
   };
 
