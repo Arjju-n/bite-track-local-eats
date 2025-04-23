@@ -1,9 +1,9 @@
-
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import { foodItems } from "@/data/foodItems";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Button } from "@/components/ui/button";
 import {
   Table,
   TableBody,
@@ -12,7 +12,7 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
-import { FileText, Egg } from "lucide-react";
+import { FileText, Egg, ArrowLeft } from "lucide-react";
 
 const DAILY_REQUIREMENTS = {
   calories: 2000,
@@ -24,6 +24,7 @@ const DAILY_REQUIREMENTS = {
 
 const FoodDetails = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
 
   const food = foodItems.find((item) => item.id === id);
@@ -34,7 +35,7 @@ const FoodDetails = () => {
 
   const getFoodIcon = () => {
     if (food.category === "Egg") return <Egg className="h-6 w-6" />;
-    if (food.category === "Rice") return <FileText className="h-6 w-6" />; // Changed from Rice to FileText
+    if (food.category === "Rice") return <FileText className="h-6 w-6" />;
     return <FileText className="h-6 w-6" />;
   };
 
@@ -49,6 +50,14 @@ const FoodDetails = () => {
   return (
     <div className="min-h-screen bg-[#FFFBF5] py-8 px-4">
       <div className="container mx-auto max-w-4xl">
+        <Button
+          variant="ghost"
+          size="icon"
+          className="mb-4"
+          onClick={() => navigate(-1)}
+        >
+          <ArrowLeft className="h-6 w-6" />
+        </Button>
         <div className="bg-white rounded-lg shadow-lg overflow-hidden">
           <div className="md:flex">
             <div className="md:w-1/2 p-6">
