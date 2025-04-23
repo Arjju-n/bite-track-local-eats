@@ -1,4 +1,3 @@
-
 import { FoodItem } from "@/types/food";
 
 export const foodItems: FoodItem[] = [
@@ -42,6 +41,62 @@ export const foodItems: FoodItem[] = [
       carbs: 21,
       fat: 0.1,
       fiber: 1.2,
+    },
+  },
+  {
+    id: "4",
+    name: "Plain Rice",
+    description: "Steamed white rice, a staple food",
+    category: "Rice",
+    servingSize: "1 cup (158g)",
+    nutrition: {
+      calories: 205,
+      protein: 4.3,
+      carbs: 45,
+      fat: 0.4,
+      fiber: 0.6,
+    },
+  },
+  {
+    id: "5",
+    name: "Boiled Egg",
+    description: "Hard-boiled chicken egg",
+    category: "Egg",
+    servingSize: "1 large egg (50g)",
+    nutrition: {
+      calories: 77,
+      protein: 6.3,
+      carbs: 0.6,
+      fat: 5.3,
+      fiber: 0,
+    },
+  },
+  {
+    id: "6",
+    name: "Egg Curry",
+    description: "Eggs cooked in spiced gravy",
+    category: "Egg",
+    servingSize: "1 serving (150g)",
+    nutrition: {
+      calories: 180,
+      protein: 12,
+      carbs: 8,
+      fat: 13,
+      fiber: 2.5,
+    },
+  },
+  {
+    id: "7",
+    name: "Fried Rice",
+    description: "Rice stir-fried with vegetables",
+    category: "Rice",
+    servingSize: "1 cup (250g)",
+    nutrition: {
+      calories: 315,
+      protein: 6.5,
+      carbs: 55,
+      fat: 8,
+      fiber: 2.8,
     },
   },
 ];
