@@ -14,7 +14,7 @@ const Login = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Navigate to the landing page (Index)
-    navigate('/');
+    navigate('/home');
   };
 
   return (
