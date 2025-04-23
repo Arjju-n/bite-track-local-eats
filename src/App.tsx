@@ -17,12 +17,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <Routes>
-          <Route path="/login" element={<Login />} />
-          <Route path="/" element={<Navigate to="/login" replace />} />
-          <Route path="/food/:id" element={<FoodDetails />} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
+      <Routes>
+        <Route path="/" element={<Index />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/food/:id" element={<FoodDetails />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
