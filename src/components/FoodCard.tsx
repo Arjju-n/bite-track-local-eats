@@ -1,15 +1,20 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FoodItem } from "@/types/food";
 import { Pizza } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 interface FoodCardProps {
   food: FoodItem;
 }
 
 const FoodCard = ({ food }: FoodCardProps) => {
+  const navigate = useNavigate();
+
   return (
-    <Card className="hover:shadow-lg transition-shadow">
+    <Card 
+      className="hover:shadow-lg transition-shadow cursor-pointer" 
+      onClick={() => navigate(`/food/${food.id}`)}
+    >
       <CardHeader className="flex flex-row items-center gap-4">
         <div className="p-2 bg-accent rounded-full">
           <Pizza className="h-6 w-6 text-primary" />
