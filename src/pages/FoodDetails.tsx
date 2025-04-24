@@ -55,7 +55,7 @@ const FoodDetails = () => {
           variant="ghost"
           size="icon"
           className="mb-4"
-          onClick={() => navigate('/')}
+          onClick={() => navigate('/home')}
         >
           <ArrowLeft className="h-6 w-6" />
         </Button>
